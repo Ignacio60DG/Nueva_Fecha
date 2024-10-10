@@ -14,6 +14,17 @@ public class Main {
         int year = sc.nextInt();
         sc.close();
 
+        //if(mes == 4 || ... || mes == 11)
+        //if (dia>1 && día<31){...
+        //}else if (dia==31){...
+        //}
+        //if(mes == 1 || ... || mes == 12){
+        // if(dia>1 && dia<30){...
+        // }else if(dia==31 && mes!=12){...
+        // }else if(dia==31){...}
+        //}
+        //Ya lo mismo pero con febrero en bisiesto.
+
         if(year >= 1 && year <= 4000 && dia>=1 && dia<=30 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 | mes == 8 || mes == 10 || mes == 12)) {
             System.out.println((dia+1)+" / "+mes+" / "+year);
         } else if (year >= 1 && year <= 4000 && dia == 31 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 | mes == 8 || mes == 10)) {
