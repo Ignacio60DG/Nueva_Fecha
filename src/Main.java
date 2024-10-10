@@ -27,10 +27,12 @@ public class Main {
         }else if (year >= 1 && year <= 4000 && dia>=1 && dia < 29 && mes == 2 && year%4 == 0){
             System.out.println((dia+1)+" / "+mes+" / "+year);
         }else if (year >= 1 && year <= 4000 && dia == 29 && mes == 2 && year%4 == 0){
+            //envez de else aquí debería de ser solo if y poner solo (día == 29)
             System.out.println(1+" / "+(mes+1)+" / "+year);
         }else if (year >= 1 && year <= 4000 && dia>=1 && dia < 28 && mes == 2 && year%4 != 0){
             System.out.println((dia+1)+" / "+mes+" / "+year);
         }else if (year >= 1 && year <= 4000 && dia == 28 && mes == 2 && year%4 != 0){
+            ////envez de else aquí debería de ser solo if y poner solo (día == 28)
             System.out.println(1+" / "+(mes+1)+" / "+year);
         }else{
             System.out.println("Conocimiento de fechas no tener tú.");
