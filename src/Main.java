@@ -9,28 +9,44 @@ public class Main {
         System.out.println("La fecha se comprende desde el 1 D.C hasta 4000 D.C.");
 
         Scanner sc = new Scanner(System.in);
-        int dia = sc.nextInt();
-        int mes = sc.nextInt();
-        int year = sc.nextInt();
+        System.out.println("Día: "); int dia = sc.nextInt();
+        System.out.println("Mes: "); int mes = sc.nextInt();
+        System.out.println("Año: "); int year = sc.nextInt();
         sc.close();
 
-        //if(mes == 4 || ... || mes == 11)
-        //if (dia>1 && día<31){...
-        //}else if (dia==31){...
-        //}
-        //else if(mes == 1 || ... || mes == 12){
-        // if(dia>1 && dia<30){...
-        // }else if(dia==31 && mes!=12){...
-        // }else if(dia==31){...}
-        //}
-        //Ya lo mismo pero con febrero en bisiesto.
-        //else if(mes == 2){
-        //if(dia>1 && dia<30){...
-        //}else if(year%4=0 && dia == 29){...
-        //}else if(dia==28){...
-        //}
-        // else{sout("Fecha incorrecta revisalo");}
+        //Meses con 31 días
+        if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
+        if (dia>1 && dia<31){
+            System.out.println((dia+1)+" / "+mes+" / "+year);
+        }else if (dia==31){
+            System.out.println(1+" / "+(mes+1)+" / "+year);
+        }
+        //Meses con 30 dias incluido el (mes 12)
+        }else if(mes == 1 || mes == 3 || mes == 5 || mes == 7 | mes == 8 || mes == 10 || mes == 12){
+        if(dia>1 && dia<30){
+            System.out.println((dia+1)+" / "+mes+" / "+year);
+        }else if(dia==31 && mes!=12){
+            System.out.println(1+" / "+(mes+1)+" / "+year);
+        }else if(dia==31){
+            System.out.println(1+" / "+1+" / "+(year+1));
+        }
+        //Febrero con cualidad de que puede ser bisiesto
+        }else if(mes == 2){
+        if(dia>=1 && dia<28){
+            System.out.println((dia+1)+" / "+mes+" / "+year);
+        }else if(dia==28 && year%4!=0){
+            System.out.println(1+" / "+(mes+1)+" / "+year);
+        }else if(dia==29){
+            System.out.println(1+" / "+(mes+1)+" / "+year);
+        }else if(dia==28){
+            System.out.println((dia+1)+" / "+mes+" / "+year);
+        }
+        }
+        else{
+            System.out.println("Fecha incorrecta revisalo");
+        }
 
+        /*
         if(year >= 1 && year <= 4000 && dia>=1 && dia<=30 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 | mes == 8 || mes == 10 || mes == 12)) {
             System.out.println((dia+1)+" / "+mes+" / "+year);
         } else if (year >= 1 && year <= 4000 && dia == 31 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 | mes == 8 || mes == 10)) {
@@ -56,5 +72,6 @@ public class Main {
             System.out.println("Tú tenter que seguir camino de la fecha.");
             System.out.println("Si no mensaje este te saldra... ¡Que la fecha te acompañe!");
         }
+         */
     }
 }
