@@ -16,14 +16,14 @@ public class Main {
 
         //Meses con 31 días
         if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
-        if (dia>1 && dia<31){
+        if (dia>=1 && dia<31){
             System.out.println((dia+1)+" / "+mes+" / "+year);
         }else if (dia==31){
             System.out.println(1+" / "+(mes+1)+" / "+year);
         }
         //Meses con 30 dias incluido el (mes 12)
         }else if(mes == 1 || mes == 3 || mes == 5 || mes == 7 | mes == 8 || mes == 10 || mes == 12){
-        if(dia>1 && dia<30){
+        if(dia>=1 && dia<30){
             System.out.println((dia+1)+" / "+mes+" / "+year);
         }else if(dia==31 && mes!=12){
             System.out.println(1+" / "+(mes+1)+" / "+year);
